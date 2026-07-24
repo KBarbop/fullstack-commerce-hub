@@ -1,0 +1,239 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1001;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  color: #000;
+}
+
+.modalTitle {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.inputGroup {
+  margin-bottom: 15px;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.inputGroup textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+.inputGroupRow {
+  display: flex;
+  gap: 2rem;
+}
+
+.floorInput {
+  display: flex;
+  width: 90%;
+  align-items: center;
+}
+
+.floorInput label {
+  padding-right: 1rem;
+}
+
+.dropdown {
+  background-color: #f3f4f6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 25px;
+}
+
+.dropdownItem {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dropdownItem:hover {
+  background-color: #e2e8f0;
+}
+
+.dropdownIcon {
+  margin-right: 10px;
+}
+
+.map {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.paymentGroup {
+  margin-bottom: 20px;
+}
+
+.paymentGroup label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.paymentOptions {
+  display: flex;
+  gap: 30px; 
+}
+
+.paymentOption {
+  display: flex;
+  align-items: center;
+}
+
+.paymentGroup input[type="radio"] {
+  margin-right: 10px; 
+  transform: scale(1.2);
+  accent-color: #007BFF; 
+}
+
+.paymentGroup input[type="radio"]:hover {
+  cursor: pointer;
+}
+
+.paymentGroup label[for="card-payment"],
+.paymentGroup label[for="cash-payment"] {
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+  margin-top: 10px;
+  display:flex;
+  gap:1rem;
+  align-items: center;
+}
+.paymentGroup label[for="card-payment"] .paymentIcon,
+.paymentGroup label[for="cash-payment"] .paymentIcon {
+  margin-top: 5px;
+}
+
+
+
+.checkoutButtonsRow {
+  display: flex;
+  gap: 1rem;
+}
+
+.btnPrimary {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnPrimary:hover {
+  background-color: #d3bb30;
+}
+
+.btnSecondary {
+  background-color: #ccc;
+  border-radius: 5px;
+  border: none;
+  color: #333;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btnSecondary:hover {
+  background-color: #bbb;
+}
+
+.loadingSpinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.successMessage {
+  text-align: center;
+  color: green;
+  font-size: 18px;
+}
+
+.successCheckmark {
+  font-size: 40px;
+  color: green;
+}

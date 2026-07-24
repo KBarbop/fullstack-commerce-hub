@@ -1,0 +1,13 @@
+export { default as Homepage } from './public/homepage/homepage.page';
+export { default as LogIn } from './public/log-in/log-in.page';
+export { default as Dashboard } from './shared/dashboard/dashboard.page';
+export { default as Categories } from './shared/categories/categories.page';
+export { default as CategoryForm } from './shared/category-form/category-form.page';
+export { default as Products } from './shared/products/products.page';
+export { default as ProductForm } from './shared/product-form/product-form.page';
+export { default as Users } from './shared/users/users.page';
+export { default as UserView } from './shared/user-view/user-view.page';
+export { default as OrderView } from './shared/order-view/order-view.page';
+export { default as OrdersSystem } from './shared/order-system/order-system.page';
+export { default as ProductView } from './shared/product-view/product-view.page';
+export { default as CategoryView } from './shared/category-view/category-view.page';

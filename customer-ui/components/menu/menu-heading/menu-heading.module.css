@@ -1,0 +1,58 @@
+.deliverySection {
+    position: relative;
+    background-color: #0e1319;
+    padding: 5rem 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .deliveryBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+  .topWave, .bottomWave {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+  }
+  
+  .topWave {
+    top: 0;
+  }
+  
+  .bottomWave {
+    bottom: 0;
+  }
+  
+  .deliveryContent {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .deliveryText {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  .deliveryIcon {
+    height: 150px; 
+    width: auto;
+    margin-bottom: 1rem;
+  }
+  

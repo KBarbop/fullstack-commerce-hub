@@ -1,0 +1,87 @@
+.flexContainer {
+  display: flex;
+  max-width: 1400px; 
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .flexContainer {
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+}
+
+.formContainer {
+  flex: 1;
+  max-width: 700px; 
+  background: #f7f7f7;
+  padding: 3rem;
+  border-radius: 15px; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formContainer:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.inputGroup {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inputGroup textarea {
+  height: 150px;
+}
+
+.inputGroup .errorMessage {
+  color: #e74c3c; 
+  font-size: 0.875rem; 
+  font-weight: bold;
+}
+
+.buttonPrimary {
+  
+  width: 100%;
+  padding: 1rem;
+  background-color: #0070f3;
+  margin-top:2rem;
+  color: white;
+  font-size: 1.25rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttonPrimary:hover {
+  background-color: #005bb5;
+}
+
+@media (max-width: 768px) {
+  .buttonPrimary {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+}
+

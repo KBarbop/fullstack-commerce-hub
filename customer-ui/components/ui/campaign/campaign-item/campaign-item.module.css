@@ -1,0 +1,96 @@
+.campaignItem {
+  width: 80%; 
+  max-width: 350px; 
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.campaignItem:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.campaignImageWrapper {
+  position: relative;
+  width: 60%; 
+  padding-top: 60%;
+  max-width: 170px; 
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.campaignImageWrapper img {
+  transition: transform 0.3s ease; 
+}
+
+.campaignItem:hover .campaignImageWrapper img {
+  transform: scale(1.1); 
+}
+
+.campaignText {
+  text-align: center;
+}
+
+.campaignTitle {
+  font-size: 1.5rem; 
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.discountText {
+  font-size: 2rem; 
+  color: #d8b740;
+  margin-bottom: 1rem;
+}
+
+.discountAmount {
+  font-weight: bold;
+}
+
+.discountOff {
+  font-size: 1.5rem; 
+  color: #555;
+}
+
+.orderButton {
+  padding: 0.5rem 1rem;
+  margin:0 auto;
+  background-color: #ffcc00;
+  color: #333;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.orderButton:hover {
+  background-color: #ff9900;
+}
+
+
+@media (min-width: 768px) {
+  .campaignItem {
+    width: 45%; 
+  }
+
+  .campaignImageWrapper {
+    width: 50%; 
+    padding-top: 50%; 
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .campaignItem {
+    width: 30%; 
+  }
+}

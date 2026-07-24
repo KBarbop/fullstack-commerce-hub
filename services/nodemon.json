@@ -1,0 +1,4 @@
+{
+  "watch": ["services/express-server"],
+  "ext": "js, ts"
+}

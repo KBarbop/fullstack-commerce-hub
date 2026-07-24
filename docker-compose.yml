@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    volumes:
+      - mongo_data:/data/db
+    ports:
+      - "27017:27017"
+
+  api:
+    build:
+      context: .
+      dockerfile: services/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - ATLAS_URI=mongodb://mongo:27017/commerce-hub
+      - ACCEPTED_URLS=http://localhost:4000,http://localhost:3000
+      - JWT_SECRET=local-dev-secret-change-me
+      # Add remaining env vars here or use an env_file
+    depends_on:
+      - mongo
+
+  customer-ui:
+    build:
+      context: ./customer-ui
+      args:
+        - NEXT_PUBLIC_API_URL=http://localhost:8000
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=production
+      # Add remaining NEXT_PUBLIC_* vars as build args above — they must be set at build time
+
+  admin-ui:
+    build:
+      context: .
+      dockerfile: admin-ui/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+
+volumes:
+  mongo_data:

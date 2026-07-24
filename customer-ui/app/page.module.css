@@ -1,0 +1,146 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow {
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+
+.heroSection {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+  padding: 3rem;
+  position: relative;
+  margin-left: calc(-50vw + 50%);
+  z-index: 1;
+  gap: 2rem; 
+}
+
+.textSection {
+  color: #fff;
+  max-width: 600px;
+  text-align: center;
+}
+
+.textSection h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.textSection p {
+  font-size: 1.2rem;
+}
+
+
+.imageSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width: 700px;
+}
+
+@media (max-width: 1024px) {
+  .imageSection {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    flex-direction: column; 
+    padding: 2rem;
+    margin-left: 0;
+  }
+
+  .textSection h1 {
+    font-size: 2.5rem; 
+  }
+
+  .textSection p {
+    font-size: 1rem; 
+  }
+
+  .imageSection {
+    width: 100%;
+    height: 25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .textSection h1 {
+    font-size: 2rem; 
+  }
+
+  .textSection p {
+    font-size: 0.9rem; 
+  }
+
+  .heroSection {
+    padding: 1rem;
+  }
+}
+
+
+.cta {
+  font-size: 1.2rem;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cta a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, #f9572a, #ff9b05);
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta a:hover,
+.cta a:active {
+  background: linear-gradient(90deg, #fd4715, #f9b241);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  color: #ddd6cb;
+  font-size: 1.5rem;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  padding: 2rem 0;
+  background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .section {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}

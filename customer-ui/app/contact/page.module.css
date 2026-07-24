@@ -1,0 +1,144 @@
+
+.heroSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+  padding: 3rem;
+  position: relative;
+  width: 100%; 
+  z-index: 1;
+  gap: 2rem;
+  overflow-x: hidden;
+}
+
+.textSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  max-width: 600px; 
+  text-align: left; 
+}
+
+.textSection h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.textSection p {
+  font-size: 1.2rem;
+}
+
+.iframeContainer {
+  padding-top: 2rem;
+}
+
+.iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 8px;
+}
+
+.formSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  width: 30%;
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    flex-direction: column; 
+    padding: 2rem 1rem; 
+    margin-left: 0; 
+  }
+
+  .formSection {
+    width: 100%; 
+    padding-top: 0; 
+    padding-bottom: 1rem; 
+  }
+
+  .textSection {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem; 
+  }
+
+  .iframe {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .textSection h1 {
+    font-size: 2rem; 
+  }
+
+  .textSection p {
+    font-size: 1rem; 
+  }
+
+  .iframe {
+    height: 250px; 
+  }
+
+  .formSection {
+    padding: 1rem 0; 
+  }
+}
+
+.cardsSection {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+  gap: 2rem; 
+}
+
+.infoCard {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 45%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.infoCard h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.infoCard p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.contactLink {
+  color: #0070f3;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.contactLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .infoCard {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .infoCard {
+    width: 100%; 
+    padding: 1.5rem; 
+  }
+}

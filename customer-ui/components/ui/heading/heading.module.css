@@ -1,0 +1,30 @@
+.headingContainer {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .headingTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .headingDescription {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 20px;
+  }
+  
+  .headingDecoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+  
+  .separatorIcon {
+    width: 250px; 
+    margin: 0 auto; 
+    display: block;
+  }

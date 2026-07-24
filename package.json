@@ -1,0 +1,21 @@
+{
+  "name": "commerce-hub",
+  "version": "1.0.0",
+  "description": "FullStack Commerce Hub",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install:all": "concurrently \"cd services && npm install\" \"cd admin-ui && npm install\" \"cd customer-ui && npm install\"",
+    "run:all": "concurrently \"cd services && npm start\" \"cd admin-ui && npm run dev\" \"cd customer-ui && npm run dev\"",
+    "clean:all": "concurrently \"cd services && rm -rf node_modules && rm -rf package-lock.json\" \"cd admin-ui && rm -rf node_modules && rm -rf package-lock.json\" \"cd customer-ui && rm -rf node_modules && rm -rf package-lock.json\"",
+    "build:all": "cd services && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+  }
+}

@@ -1,0 +1,12 @@
+.imgLogo {
+  width: auto;
+  height: 100px; 
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .imgLogo {
+    width: 90%;
+  }
+}

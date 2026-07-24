@@ -1,0 +1,11 @@
+.places-content {
+    margin: 3rem;
+}
+
+.places-filters-container {
+    float: right;
+}
+
+.places-filter-btn {
+    font-size: 20px;
+}

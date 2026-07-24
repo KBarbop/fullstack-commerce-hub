@@ -1,0 +1,123 @@
+
+.container {
+  margin: 40px auto;
+  padding: 20px;
+  width: 100%;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+.orderTable {
+  width: 100%;
+  border-collapse: collapse;
+  display: table; 
+}
+
+.orderTable th,
+.orderTable td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.orderTable th {
+  background-color: #ffcf00;
+  color: white;
+  font-weight: bold;
+}
+
+.orderTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.orderTable tr:hover {
+  background-color: #ddd;
+}
+
+.orderTable td {
+  font-size: 14px;
+  color: #333;
+}
+
+
+.delivered {
+  color: green;
+  font-weight: bold;
+}
+
+.inprogress {
+  color: orange;
+  font-weight: bold;
+}
+
+.canceled {
+  color: red;
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+  .orderTable {
+    display: block; 
+  }
+
+  .orderTable thead,
+  .orderTable tbody,
+  .orderTable th,
+  .orderTable td,
+  .orderTable tr {
+    display: block;
+  }
+
+  .orderTable thead {
+    float: left; 
+  }
+
+  .orderTable tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .orderTable td {
+    border: none;
+    padding: 10px 15px;
+    position: relative;
+    font-size: 14px;
+  }
+
+  .orderTable td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    color: #666;
+    top: 10px;
+    font-size: 12px;
+  }
+
+  .orderTable td[data-label="Date & Time"] {
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .orderTable th {
+    display: none;
+  }
+
+  .orderTable td:last-child {
+    border-bottom: 1px solid #ddd;
+  }
+}

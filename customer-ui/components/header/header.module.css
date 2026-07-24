@@ -1,0 +1,281 @@
+.header {
+  height: 5.5rem;
+  position: relative;
+  width: 100%;
+}
+
+.bgTransparent {
+  background: transparent;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem;
+}
+
+.nav {
+  position: fixed;
+  top: -150%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9); 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out; 
+  z-index: 50;
+}
+
+.nav.menuModalActive {
+  top: 0;
+  background-color: rgba(46, 42, 42, 0.95); 
+}
+
+.navList {
+  display: flex;
+  padding-left:0;
+  margin-top: 2rem;
+  gap: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out 0.1s;
+}
+
+.nav.menuModalActive .navList {
+  opacity: 1;
+}
+
+.navItem {
+  padding: 0.75rem 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.navItem a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navItem a:hover {
+  color: #ffcf00;
+}
+
+
+.profileLink {
+  padding: 0.75rem 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.profileLink a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+.profileLink a:hover {
+  color: #0c0c05a6;
+}
+
+.navItem a:hover {
+  color: #ffcf00;
+}
+
+
+.textPrimary {
+  color: #ffcf00;
+}
+
+.cancelButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.icon {
+  transition: all 0.3s;
+  cursor: pointer;
+  color: #ffcf00;
+  background-color: transparent;
+}
+.profileIcon {
+  transition: all 0.3s;
+  cursor: pointer;
+  color: #0c0c05a6;
+  background-color: transparent;
+}
+
+.icon:hover {
+  color: white
+}
+
+.cartIconContainer {
+  position: relative;
+}
+
+.cartBadge {
+  width: 1rem;
+  height: 1rem;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  background-color: #ffcf00;
+  position: absolute;
+  top: -0.5rem;
+  right: -0.75rem;
+  color: black;
+  font-weight: bold;
+}
+
+
+.loginRegisterButton {
+  background-color: #ffcf00;
+  color: black;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.7rem;
+  transition: background-color 0.3s ease;
+}
+
+.loginRegisterButton:hover {
+  background-color: #f5c905;
+}
+
+.menuButton {
+  display: inline-block;
+  background: transparent;
+}
+
+.userDropdownContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 40px; 
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 150px;
+
+}
+
+.dropdownItem {
+  padding: 10px 20px;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdownItem:hover {
+  background-color: #f1f1f1;
+}
+
+.userDropdownContainer.dropdownActive .dropdownMenu {
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .nav {
+    position: static;
+    width: auto;
+    height: auto;
+    display: flex;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+  }
+  .navList {
+    flex-direction: row;
+    color: white;
+    opacity: 1;
+    padding-bottom: 1rem;
+  }
+  .navItem a {
+    color: white;
+  }
+  .cancelButton {
+    display: none;
+  }
+  .orderButtonContainer {
+    display: inline-block;
+  }
+
+  .loginRegisterButton {
+    padding: 0.5rem 1rem; 
+    font-size: 1rem; 
+  }
+
+  .menuButton {
+    display: none;
+  }
+}
+
+.dropdownIcon {
+  margin-right: 8px;
+  color: #333;
+  vertical-align: middle;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center; 
+  padding: 10px 20px;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdownItem:hover {
+  background-color: #f1f1f1;
+}
+
+
+.loadingSpinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #f5c905;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

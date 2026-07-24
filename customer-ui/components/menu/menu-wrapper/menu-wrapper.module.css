@@ -1,0 +1,166 @@
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.sidebar {
+  position: sticky; 
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 2rem 1rem;
+  background-color: #fff;
+  width: 250px;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.filterList {
+  list-style: none;
+  padding: 0;
+}
+
+.filterItem {
+  cursor: pointer;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  border-left: 4px solid transparent;
+  transition: border-color 0.3s ease;
+  text-align: center;
+}
+
+.filterItem:hover,
+.activeFilter {
+  border-bottom: 4px solid #ffcc00;
+  background-color: #f9f9f9;
+}
+
+.activeFilter {
+  background-color: #f9f9f9;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 2rem;
+  overflow: auto;
+}
+
+.categorySection {
+  margin-bottom: 4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.gridColumns {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.title {
+  font-size: x-large;
+  padding: 1rem;
+  color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 0;
+    padding: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background-color: #fff;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+  }
+
+  .filterList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    scroll-snap-align: start;
+  }
+
+  .filterItem {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    border-left: none;
+    border-bottom: 4px solid transparent;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .filterItem:hover,
+  .activeFilter {
+    border-bottom: 4px solid #ffcc00;
+    background-color: #f9f9f9;
+  }
+
+  .mainContent {
+    padding: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mainContent {
+    padding: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 0;
+    overflow-x: scroll;
+  }
+
+  .filterItem {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .filterItem {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .categorySection {
+    margin-bottom: 2rem;
+  }
+
+  .mainContent {
+    padding: 1rem;
+  }
+}
